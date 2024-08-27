@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .nav{
+            display: flex;
+            justify-content: space-evenly;
+            font-size: 20px;
+            background-color: whitesmoke;
+            & li{
+                padding: 40px;
+            list-style: none;
+            } 
+            & img{
+                width: 100px;
+                border-radius: 50%;
+            }
+            & div{
+                display: flex;
+            }
+            
+            
+
+        }
+        
+        .sel:hover{
+            & .sub{
+                display: block;
+            }
+        }
+        .sub {
+            position :absolute;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: rgb(131, 234, 139);
+            display:none;
+        }
+        .sub li{
+                margin:0;
+                list-style: none;
+                padding:5px;
+                &:hover{
+                    background-color: rgb(165, 149, 121);
+                }        
+        }  
+        .nav li{
+            &:hover{
+            background-color: #002366;
+            color: white;
+                }
+            text-align: center;
+            list-style: none;
+            justify-content: center;
+        }
+        .box1{
+            justify-content: center;
+            display: flex;
+            padding: 50px;
+            background-color: #002366;
+        }
+        .cont0{
+            margin-right: 20px;
+            padding: 25px;
+            background-color: white;
+            width: 230px;
+            & p{
+                text-align: center;
+                line-height:30px;
+                font-size: 19px;
+            }
+        }
+        .cont0 h2{
+            text-align: center;
+            padding-bottom: 10px;
+
+        }
+        button{
+            align-content: center;
+            background-color: rgb(36, 186, 36);
+            border: 0;
+            margin-top: 10px;
+            padding: 10px;
+            width: 100%;
+        }
+        .half2{
+            width: 500px;
+            & p{
+                padding: 10px;
+                font-size: 18px;
+            }
+            button{
+                width: 100px;
+            }
+        }
+        .box2{
+            justify-content: center;
+            display: flex;
+            margin: 20px;
+        }
+        .half1 img{
+            max-width: 100%;
+            height: 500px;
+        }
+        .half2 img{
+            max-width: 100%;
+            height: 148px;
+            
+        }
+        .half2 div{
+            padding: 10px;
+            display: flex;
+            padding-left: 40px;
+
+        }
+        .half1 p{
+            margin-top: 350px;
+            position: absolute;
+            background-color: #00000091;
+            padding: 30px;
+            width: 500px;;
+            height: 150px;
+            color: white;
+            font-size: 29.3px;
+        }
+        .box3{
+            display: flex;
+            justify-content:space-around;
+        }
+        .bhalf{
+            margin: 20px;
+            display: flex;
+            width: 500px;
+            background-color:  #8c95b4;
+            & img{
+                width: 200px;
+            }
+            & p{
+                color: white;
+                padding: 10px;
+                font-size: 20px;
+            }
+            & button{
+                width: 100px;
+            }
+        }
+        .box4{
+            color:white;
+            padding: 80px;
+            display: flex;
+            background-color:  #002366;
+            justify-content: space-around;
+
+          
+        }
+        .ads{
+            /* width: 600px; */
+            
+            & h3{
+                padding-bottom: 20px;
+            }
+
+
+
+        }
+        .links{
+            font-size: 20px;
+            & h3{
+                padding-bottom: 20px;
+            }
+            & li{
+                padding-bottom: 10px;
+                list-style: none;
+            }
+        }
+        .keep{
+            input{
+                margin-top: 10px;
+                padding: 5px;
+                width: 200px;
+            }
+            button{
+                width: 100px;
+            }
+        }
+        .mid2{
+            font-size: 20px;
+            text-align: center;
+            padding: 30px;
+            & p{
+                font-size: 17px;
+                padding-top: 5px;
+            }
+        }
+        .mid1{
+            display: flex;
+            font-size: 20px;
+            padding: 10px;
+            padding-top: 50px;
+            justify-content: space-evenly;
+        }
+        @media only screen and (max-width:576px){
+            .nav li{
+                padding:5px;
+                flex-wrap: wrap;
+            }
+            .nav img{
+                width: 60px;
+            }
+            .box1{
+                flex-wrap: wrap;
+                & div{
+                    flex-basis: 100%;
+                    margin-bottom: 20px;
+                }
+            }
+            .half1 p{
+            margin-top: 350px;
+            position: absolute;
+            background-color: #00000091;
+            padding: 30px;
+            width: 440px;;
+            height: 150px;
+            color: white;
+            font-size: 29.3px;
+        }
+
+            .box2{
+                flex-wrap: wrap;
+            }
+            
+            .box3{
+                flex-wrap: wrap;
+            }
+            .box4{
+                flex-wrap: wrap;
+                justify-content: start;
+            }
+        
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div><li>Home</li><li>Pages</li><li class="sel">Dropdown <i class="fa-solid fa-caret-down"></i>
+            <ul class="sub">
+                <li>sub menu1</li>
+                <li>sub menu1</li>
+                <li>sub menu1</li>
+            </ul>
+        </li><li>Link Text</li>
+    </div>
+        <div><img class="img" src="logo.png" alt=""></div>
+    </div>
+    <div class="box1">
+        <div class="cont0">
+            <h2>How to Choose the Perfect Plant for Your Space</h2>
+            <p>This talk guides customers through selecting plants suited to their specific environments. It covers factors like light conditions, space size, and plant maintenance levels to help individuals find the perfect plant for their home or office, enhancing their living space with greenery that thrives.</p>
+            <button>Readmore</button>
+        </div>
+
+        <div class="cont0">
+            <h2>Caring for Your New Plant: Essential Tips for Beginners</h2>
+            <p>Focused on helping new plant owners, this talk provides practical advice on essential plant care. It includes tips on watering, feeding, repotting, and troubleshooting common issues, ensuring that beginners feel confident and equipped to nurture their plants successfully.</p>
+            <button>Readmore</button>
+        </div>
+        <div class="cont0">
+            <h2>The Benefits of Buying Plants Online</h2>
+            <p>This discussion highlights the advantages of purchasing plants through an online store. It emphasizes the convenience of home delivery, the wide variety of plants available, and the detailed care information provided with each purchase, making it easier for customers to find and care for their ideal plants.</p>
+            <button>Readmore</button>
+        </div>
+    </div>
+    <div class="mid1">
+        <h2>Community and Education</h2>
+        <h2>Community and Education</h2>
+    </div>
+    <div class="box2">
+        <div class="half1">
+            
+            <P>"If you look the right way, you can see that the whole world is a garden."</P>
+            <img src="Screenshot 2024-08-26 132819.png">
+        </div>
+        <div class="half2">
+            <div><img src="Screenshot 2024-08-26 132819.png"><p><big><b>Advantages of purchasing</b></big><br><small>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.</small><br><button>Readmore</button></p></div>
+            <div><img src="Screenshot 2024-08-26 132819.png"><p><big><b>Advantages of purchasing</b></big><br><small>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.</small><br><button>Readmore</button></p></div>
+            <div><img src="Screenshot 2024-08-26 132819.png"><p><big><b>Advantages of purchasing</b></big><br><small>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.</small><br><button>Readmore</button></p></div>
+        </div>
+    </div> 
+    <br>
+    <div class="mid2"><h2>"Plants Delivered to Your Doorstep, Happiness Delivered to Your Soul."</h2>
+    <p>From low-maintenance succulents and air-purifying houseplants to exotic tropicals and blooming beauties, we offer a diverse range of plants for every space and style.</p></div>
+    <div class="box3">
+        <div class="bhalf">
+            <img class="img" src="Screenshot 2024-08-26 132819.png">
+            <p>We carefully package and ship your plants to ensure they arrive healthy and ready to grow in your home or office.<br><button>Readmore</button></p>
+            
+        </div>
+        <div class="bhalf">
+            <img class="img" src="Screenshot 2024-08-26 132819.png">
+            <p>This discussion highlights the advantages of purchasing plants through an online store. It emphasizes the convenience of home delivery, the wide variety of plants a <br><button>Readmore</button></p>
+        </div>
+    </div>
+    <div class="box4">
+        <div class="ads">
+            <h3>LOREM IPSUM DOLOR QUICK</h3>
+            <h4>Donec sed ultrices eros. Nulla facilisi: Aliquam purus urna, porta non faucibus nec, luctus vitae ante. Suspendisse potenti. Morbi sollicitudin viverra urna, vel auctor purus volutpat vel.</h4>
+            <br><p><i class="fa-solid fa-location-dot"></i> Street Name & Number,Town, Postcode/Zip</p>
+            <br><p><i class="fa-solid fa-phone"></i> +91 99523 55934</p>
+            <br><p><i class="fa-solid fa-envelope"></i> shanmugarajk@2205.com</p>
+        </div>
+        <div class="links">
+            <h3>QUICK LINKS</h3>
+            <li>Home Page</li>
+            <li>Blog</li>
+            <li>Gallery</li>
+            <li>Portfolio</li>
+            <li>Contact Us</li>
+        </div>
+        <div class="keep">
+            <h3>KEEP IN TOUCH</h3>
+            <input type="text" placeholder="Email"><br>
+            <button>SUBMIT</button><br><br>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-discord"></i>
+        </div>
+    </div>
+
+</body>
+</html>
